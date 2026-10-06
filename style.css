@@ -1,0 +1,199 @@
+:root {
+  --bg: #ffffff;
+  --text: #202124;
+  --muted: #5f6368;
+  --line: #dfe1e5;
+  --soft: #f8f9fa;
+  --blue: #1a73e8;
+  --shadow: 0 1px 6px rgba(32, 33, 36, 0.16);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.sdu-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #3c4043;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sdu-logo:hover { text-decoration: underline; }
+
+.sdu-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--blue);
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.home {
+  width: min(760px, calc(100% - 32px));
+  margin: 8vh auto 48px;
+}
+
+.search-section { text-align: center; }
+
+.google-wordmark {
+  margin-bottom: 26px;
+  font-size: clamp(48px, 8vw, 72px);
+  font-weight: 600;
+  letter-spacing: -5px;
+  line-height: 1;
+}
+
+.google-wordmark span:nth-child(1),
+.google-wordmark span:nth-child(4) { color: #4285f4; }
+.google-wordmark span:nth-child(2),
+.google-wordmark span:nth-child(6) { color: #ea4335; }
+.google-wordmark span:nth-child(3) { color: #fbbc05; }
+.google-wordmark span:nth-child(5) { color: #34a853; }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: min(620px, 100%);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.search-box:focus-within {
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+
+.search-icon {
+  padding-left: 16px;
+  color: #9aa0a6;
+  font-size: 23px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 15px 12px;
+  font-size: 16px;
+}
+
+.search-box button {
+  align-self: stretch;
+  border: 0;
+  background: var(--blue);
+  color: #fff;
+  padding: 0 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 44px;
+}
+
+.weather-card,
+.quote-card {
+  border: 1px solid #eceff1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(60, 64, 67, .08);
+}
+
+.weather-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 132px;
+  padding: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.weather-card h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.weather-value {
+  text-align: right;
+  color: #3c4043;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.quote-card {
+  margin-top: 16px;
+  padding: 26px;
+  text-align: center;
+}
+
+blockquote {
+  margin: 12px auto 8px;
+  max-width: 610px;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.quote-author {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.text-button {
+  border: 0;
+  background: var(--soft);
+  color: var(--blue);
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+footer {
+  color: #9aa0a6;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 0 28px;
+}
+
+@media (max-width: 620px) {
+  .topbar { padding: 0 16px; }
+  .home { margin-top: 6vh; }
+  .weather-grid { grid-template-columns: 1fr; }
+  .search-box button { padding: 0 16px; }
+}

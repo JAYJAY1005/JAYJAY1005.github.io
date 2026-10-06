@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나만의 시작 홈페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="sdu-logo" href="https://www.sdu.ac.kr/" target="_blank" rel="noopener noreferrer">
+      <span class="sdu-mark">SDU</span>
+      <span>서울디지털대학교</span>
+    </a>
+  </header>
+
+  <main class="home">
+    <section class="search-section" aria-label="Google 검색">
+      <div class="google-wordmark" aria-label="Google">
+        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+      </div>
+
+      <form id="searchForm" class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off"
+               placeholder="Google 검색" aria-label="검색어">
+        <button type="submit">검색</button>
+      </form>
+    </section>
+
+    <section class="weather-grid" aria-label="오늘의 날씨">
+      <article class="weather-card">
+        <div>
+          <p class="eyebrow">오늘의 날씨</p>
+          <h2>서울</h2>
+        </div>
+        <div class="weather-value" id="seoulWeather">불러오는 중...</div>
+      </article>
+
+      <article class="weather-card">
+        <div>
+          <p class="eyebrow">오늘의 날씨</p>
+          <h2>제주</h2>
+        </div>
+        <div class="weather-value" id="jejuWeather">불러오는 중...</div>
+      </article>
+    </section>
+
+    <section class="quote-card" aria-label="오늘의 명언">
+      <p class="eyebrow">오늘의 명언</p>
+      <blockquote id="quoteText"></blockquote>
+      <p id="quoteAuthor" class="quote-author"></p>
+      <button id="newQuoteBtn" class="text-button" type="button">다른 명언 보기</button>
+    </section>
+  </main>
+
+  <footer>
+    <span id="today"></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
